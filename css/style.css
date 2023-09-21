@@ -1,0 +1,106 @@
+#profile{
+    float: left;
+    background-color: rgb(220, 83, 83);
+    color: white;
+    width: 200px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+#profile .photo_area{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.profile_photo{
+    width: 180px;
+    height: 180px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+#content{
+    margin: 10px;
+}
+.money_area{
+    /* background-color: gray; */
+    width: 1000px;
+    float: right;
+    text-align: center;
+}
+#content .self_intro{
+    color: white;
+    float: left;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.edit_btn_class{
+    float: left;
+    margin-top: 130px;
+    width: 180px;
+    border-radius: 20px;
+    height: 50px;
+}
+.btn_group_add{
+    display: flex;
+}
+.all_money{
+    width: 500px;
+    height: 300px;
+    font-size: 25px;
+    text-align: start;
+}
+.div_line{
+    background-color: gray;
+    width: 1px;
+    height: 50px;
+}
+.all_money_child{
+    font-size: 35px;
+    margin:30px;
+}
+.all_amount{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    margin: 20px;
+}
+.amount_table{
+    margin-left: 30px;
+    width: 50%;
+}
+.amount_table td{
+    width: 300px;
+    text-align: start;
+}
+#new_chart{
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+}
+.add_list{
+    width: 500px;
+    float: right;
+    margin-top: -280px;
+}
+#edit_div{
+    text-align: start;
+    font-size: 20px;
+}
+.alt_text{
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

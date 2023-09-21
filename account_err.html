@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帳號錯誤</title>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.6.4.js"></script>
+    <script src="js/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+        $(document).ready(function(){
+            var time = $('#cd_time').html();
+            // console.log(time);
+            start = setInterval(cd_start,1000);
+            function cd_start(){
+                if(time < 1){
+                    window.location.replace('index.html');
+                }else{
+                    time--;
+                    $('#cd_time').html(time);
+                }
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1>帳號錯誤!</h1>
+        </div>
+        <div class="row">
+            <span id="cd_area"><strong id="cd_time">5</strong>秒後再試一試</span>
+        </div>
+    </div>
+</body>
+</html>
