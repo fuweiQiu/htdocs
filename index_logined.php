@@ -5,6 +5,16 @@ if(isset($_SESSION['username'])){
     header('location:index.php?loginFirst');
 };?>
 <script>
+    function fillUser(userData){
+        for(let index in userData){
+            if(userData[index].username == <?php echo $_SESSION['username'] ?>){
+                let userInfo = userData[index];
+                break;
+            }
+        }
+        let contentUsername = document.getElementById('contentUsername');
+        contentUsername.textContent = userInfo.username;
+    }
     let allMoney = 'https://ap10.ragic.com/bookKeepingSpecialTopic/forms/6?api&APIKey=UHY4YmRrM1Q3SkxXSS94OU05Q3R1MzlTS0hPdm1YM1Z2QklJUmZFL3RMZmlIelZxYUFDallxRWlaTnFRNUtqaA==';
     let users = 'https://ap10.ragic.com/bookKeepingSpecialTopic/forms/4?api&APIKey=UHY4YmRrM1Q3SkxXSS94OU05Q3R1MzlTS0hPdm1YM1Z2QklJUmZFL3RMZmlIelZxYUFDallxRWlaTnFRNUtqaA==&listing'
     let trade = 'https://ap10.ragic.com/bookKeepingSpecialTopic2/forms/5?api&APIKey=UHY4YmRrM1Q3SkxUUHJZYVF3VmVxd2ZhOFE1M1dWWlpad2FrQmRjaEt3WFBWOWg1QmhDcTloSlllWG8yaDJqRA==&listing';
@@ -13,7 +23,7 @@ if(isset($_SESSION['username'])){
             return res.json();
         })
         .then(userData => {
-            
+            fillUser(userData);
         })
 </script>
 <!-- 
@@ -50,7 +60,7 @@ if(isset($_SESSION['username'])){
                 <img src="<?php echo $row['photo']?>" alt="" class="profile_photo">
             </div>
             <div id="content">
-                <h3 style="font-weight:bold;"><?php echo $row['username']?></h3>
+                <h3 style="font-weight:bold;" id="contentUsername"><?php echo $row['username']?></h3>
                 <!-- 使用者名稱 房間 自介 -->
                 <span>所在房間：<?php echo $row['room']?></span>
                 <span class="self_intro">
